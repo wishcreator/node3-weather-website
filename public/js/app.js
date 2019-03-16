@@ -1,8 +1,3 @@
-console.log('Client side');
-
-
-
-
 const form = document.querySelector('form');
 
 const msg1 = document.querySelector('#msg-1');
@@ -16,7 +11,7 @@ form.addEventListener('submit', e => {
     msg1.textContent = 'Loadin...';
     msg2.textContent = '';
 
-    fetch('http://localhost:3000/weather?search='+search).then(res => {
+    fetch('/weather?search='+search).then(res => {
     res.json().then(data => {
         if(data.error){
             return  msg1.textContent = data.error;

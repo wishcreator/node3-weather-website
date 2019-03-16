@@ -6,6 +6,8 @@ const geocode = require('./utils/geocode.js');
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
+
 const app = express();
 
 //Define Path for express config
@@ -90,6 +92,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Start');
 });
